@@ -25,6 +25,7 @@ export const getJavascriptSource = props => {
   const renderer = "canvas"
 
   return `
+              ${props.initializeCode}
              var chart = echarts.init(document.getElementById('main'), undefined, {renderer: '${renderer}'});
             chart.setOption(parse(decodeURI(\"${encodeURI(
               toString(props.option)
