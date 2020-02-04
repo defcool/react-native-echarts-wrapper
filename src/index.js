@@ -157,7 +157,7 @@ class ECharts extends Component {
     }
 
     return (
-      <View style={{ flex: 1 }}>
+      <View style={{...this.props.style, flex: 1 }}>
         <WebView
           ref={this.getWebViewRef}
           originWhitelist={["*"]}
